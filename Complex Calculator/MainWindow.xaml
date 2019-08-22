@@ -1,0 +1,115 @@
+﻿<Window x:Class="ComplexCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComplexCalculator"
+        mc:Ignorable="d"
+        Title="Complex Calculator"  Height="337" Width="640" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="10" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<Grid Grid.Row="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="10" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+
+			<Label Content="First Operand"		Grid.Column="1"	HorizontalAlignment="Left"	VerticalAlignment="Bottom" />
+			<Label Content="Second Operand"		Grid.Column="2"	HorizontalAlignment="Left"	VerticalAlignment="Bottom" />
+			<Label Content="Result"				Grid.Column="3"	HorizontalAlignment="Left"	VerticalAlignment="Bottom" />
+
+			<Label Content="Real"				Grid.Row="1"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+			<Label Content="Imaginary"			Grid.Row="2"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+			<Label Content="Abs"				Grid.Row="4"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+			<Label Content="Phi (rad)"			Grid.Row="5"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+			<Label Content="Algebraic form"		Grid.Row="6"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+			<Label Content="Polar form"			Grid.Row="7"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+			<Label Content="Exponential form"	Grid.Row="8"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+
+			<TextBox x:Name="firstReal"			Grid.Column="1"	Grid.Row="1"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" />
+			<TextBox x:Name="secondReal"		Grid.Column="2"	Grid.Row="1"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" />
+			<TextBox x:Name="resultReal"		Grid.Column="3"	Grid.Row="1"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+
+			<TextBox x:Name="firstImaginary"	Grid.Column="1"	Grid.Row="2"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" />
+			<TextBox x:Name="secondImaginary"	Grid.Column="2"	Grid.Row="2"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" />
+			<TextBox x:Name="resultImaginary"	Grid.Column="3"	Grid.Row="2"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+
+			<Rectangle Grid.Row="3"	Grid.ColumnSpan="4"	Fill="Black"	Height="1"	VerticalAlignment="Center" />
+
+			<TextBox x:Name="firstAbs" 			Grid.Column="1"	Grid.Row="4"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="secondAbs" 		Grid.Column="2"	Grid.Row="4"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="resultAbs" 		Grid.Column="3"	Grid.Row="4"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+
+			<TextBox x:Name="firstPhi" 			Grid.Column="1"	Grid.Row="5"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="secondPhi" 		Grid.Column="2"	Grid.Row="5"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="resultPhi" 		Grid.Column="3"	Grid.Row="5"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+
+			<TextBox x:Name="firstAlgebraic" 	Grid.Column="1"	Grid.Row="6"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="secondAlgebraic" 	Grid.Column="2"	Grid.Row="6"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="resultAlgebraic" 	Grid.Column="3"	Grid.Row="6"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+
+			<TextBox x:Name="firstPolar" 		Grid.Column="1"	Grid.Row="7"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="secondPolar" 		Grid.Column="2"	Grid.Row="7"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="resultPolar" 		Grid.Column="3"	Grid.Row="7"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+
+			<TextBox x:Name="firstExponential"	Grid.Column="1"	Grid.Row="8"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="secondExponential"	Grid.Column="2"	Grid.Row="8"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+			<TextBox x:Name="resultExponential"	Grid.Column="3"	Grid.Row="8"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+		</Grid>
+
+		<Rectangle Grid.Row="1"	Fill="Black"	Height="1"	VerticalAlignment="Center" />
+		
+		<Grid Grid.Row="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Label Content="Unary Operations"	Grid.Row="0"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+			<Label Content="Binary Operations"	Grid.Row="1"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+
+            <Button  Content="Conjugate"	Grid.Column="1"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="5, 0, 5, 0" Click="Conjugate" />
+            <Button  Content="Recipropal"	Grid.Column="2"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="5, 0, 5, 0" Click="Recipropal" />
+            <Button  Content="NOP"	        Grid.Column="3"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="5, 0, 5, 0" Click="Nop" />
+            
+			<Button  Content="Add"			Grid.Row="1"	Grid.Column="1"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="5, 0, 5, 0" Click="Add" />
+			<Button  Content="Substract"	Grid.Row="1"	Grid.Column="2"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="5, 0, 5, 0" Click="Substract" />
+			<Button  Content="Multiply"		Grid.Row="1"	Grid.Column="3"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="5, 0, 5, 0" Click="Multiply" />
+			<Button  Content="Divide"		Grid.Row="1"	Grid.Column="4"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="5, 0, 5, 0" Click="Divide" />
+			<Button  Content="Pow"			Grid.Row="1"	Grid.Column="5"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="5, 0, 5, 0" Click="Pow" />
+		</Grid>
+	</Grid>
+</Window>
