@@ -9,7 +9,7 @@
 - Unary operations (applies to the first operand):
   - Conjugation;
   - Recipropal;
-  - NOP (doesn't produce a result, but calculates additional information about the first oeprand);
+  - NOP (doesn't produce a result, but calculates additional information about the first operand);
 - Binary operations:
   - Addition;
   - Subtraction;
